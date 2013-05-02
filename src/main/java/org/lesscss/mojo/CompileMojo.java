@@ -14,17 +14,17 @@
  */
 package org.lesscss.mojo;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.util.Arrays;
-
 import org.apache.maven.plugin.MojoExecutionException;
 import org.codehaus.plexus.util.StringUtils;
 import org.lesscss.LessCompiler;
 import org.lesscss.LessException;
 import org.lesscss.LessSource;
 import org.sonatype.plexus.build.incremental.BuildContext;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.util.Arrays;
 
 /**
  * Goal which compiles the LESS sources to CSS stylesheets.
@@ -117,7 +117,11 @@ public class CompileMojo extends AbstractLessCssMojo {
 
 				buildContext.removeMessages(input);
 
-				File output = new File(outputDirectory, file.replace(".less", ".css"));
+                String extReplacement = ".css";
+                if (compress) {
+                    extReplacement = ".min.css";
+                }
+				File output = new File(outputDirectory, file.replace(".less", extReplacement));
 
 				if (!output.getParentFile().exists() && !output.getParentFile().mkdirs()) {
 					throw new MojoExecutionException("Cannot create output directory " + output.getParentFile());
