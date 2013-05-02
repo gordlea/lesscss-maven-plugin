@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.tensheet</groupId>
     <artifactId>lesscss-maven-plugin</artifactId>
-    <version>1.3.3.2-SNAPSHOT</version>
+    <version>1.3.3.2</version>
     <packaging>maven-plugin</packaging>
     <name>Bench.co LESS CSS Maven Plugin</name>
     <description>Bench.co LESS CSS Maven Plugin</description>
