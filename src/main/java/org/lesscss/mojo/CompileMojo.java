@@ -32,6 +32,7 @@ import java.util.Arrays;
  * @author Marcel Overdijk
  * @goal compile
  * @phase process-sources
+ * @ThreadSafe=true
  */
 public class CompileMojo extends AbstractLessCssMojo {
 

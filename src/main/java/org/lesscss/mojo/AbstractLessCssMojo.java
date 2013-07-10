@@ -24,6 +24,7 @@ import org.sonatype.plexus.build.incremental.BuildContext;
  * Abstract class which provides common configuration properties and methods.
  * 
  * @author Marcel Overdijk
+ * @ThreadSafe=true
  */
 public abstract class AbstractLessCssMojo extends AbstractMojo {
 

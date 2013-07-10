@@ -29,6 +29,7 @@ import org.lesscss.LessSource;
  * 
  * @author Marcel Overdijk
  * @goal list
+ * @ThreadSafe=true
  */
 public class ListMojo extends AbstractLessCssMojo {
 
